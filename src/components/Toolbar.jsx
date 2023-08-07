@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import cn from "classnames";
 import "../App.css";
 import { v4 as uuidv4 } from 'uuid';
@@ -16,6 +17,12 @@ function Toolbar({ handleSelectFilter, filters, selected }) {
       ))}
     </div>
   );
+}
+
+Toolbar.propTypes = {
+  handleSelectFilter: PropTypes.func.isRequired,
+  filters: PropTypes.object.isRequired,
+  selected: PropTypes.string.isRequired,
 }
 
 export default Toolbar;
